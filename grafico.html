@@ -7,14 +7,19 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <div class="container">
-        <div>
+    <header class="header">
+        <div class="box">
+            <h1>Dados do Sensor</h1>
+        </div>
+    </header>
+    <main class="container">
+        <div class="box">
             <canvas id="linha" height="400" width="800"></canvas>
         </div>
-        <div>
-            <canvas id="barra" height="400" width="800"></canvas>
+        <div class="box">
+            <canvas id="barra" height="400" width="800"></canvas> 
         </div>
-    </div>
+    </main>
         
         <script src="libs/chart.js"></script>
 
@@ -36,6 +41,7 @@
                     },
                     {
                         label: 'Umidade',
+
                         data: [80,82,80,85,80,83],
                         borderWidth: 2,
                         backgroundColor: '#51AFF7',
@@ -45,9 +51,36 @@
                
             },
             options:{
+                plugins: {
+                    legend: {
+                        labels: {
+                                color: '#FFFFFF', // Cor do texto da legenda
+                            font: {
+                                size: 14,     // Tamanho da fonte
+                                family: 'Arial' 
+                            }
+                        }
+                    }
+                },
                 scales: {
                     y:{
-                        beginAtZero: true
+                        beginAtZero: true,
+                        grid: {
+                            color: 'white',
+                            borderColor: 'white',
+                        },
+                        ticks: {
+                            color: 'white'
+                        }
+                    },
+                    x: {
+                        grid: {
+                            color: 'white',
+                            borderColor: 'white',
+                        },
+                        ticks: {
+                            color: 'white'
+                        }
                     }
                 }
             }
@@ -74,9 +107,36 @@
                
             },
             options:{
+                plugins: {
+                    legend: {
+                        labels: {
+                                color: '#FFFFFF', // Cor do texto da legenda
+                            font: {
+                                size: 14,     // Tamanho da fonte
+                                family: 'Arial' 
+                            }
+                        }
+                    }
+                },
                 scales: {
-                    y:{
-                        beginAtZero: true
+                     y:{
+                        beginAtZero: true,
+                        grid: {
+                            color: 'white',
+                            borderColor: 'white',
+                        },
+                        ticks: {
+                            color: 'white'
+                        }
+                    },
+                    x: {
+                        grid: {
+                            color: 'white',
+                            borderColor: 'white',
+                        },
+                        ticks: {
+                            color: 'white'
+                        }
                     }
                 }
             }
